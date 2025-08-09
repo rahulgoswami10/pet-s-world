@@ -1,0 +1,57 @@
+table {
+    border-radius: 12px;
+}
+
+th {
+    color: #fff;
+    font-size: 1.28rem;
+}
+
+td {
+    color: #fff;
+    font-size: 1.24rem;
+}
+
+td.dogname {
+    font-weight: bold;
+}
+
+.display__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    height: 68vh;
+}
+
+.action__btn {
+    display: flex;
+    gap: .85rem;
+}
+
+.display__container button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: 1.24rem;
+    padding: .5rem .52rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: rgb(100, 100, 253);
+}
+
+button.delete {
+    background-color: rgb(209, 52, 52);
+}
+
+button a {
+    color: #fff;
+}
+
+
+.footer__container {
+    /* height: 20vh; */
+}
