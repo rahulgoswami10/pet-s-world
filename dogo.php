@@ -33,6 +33,7 @@
                         <a href="">Contact us</a>
                     </div>
                     <!-- nav links ends -->
+                    <a href="login.php" id="login"><button>Log in <i class="uil uil-signout"></i></button></a>
                 </div>
             </nav>
         </header>
@@ -61,6 +62,14 @@
                         <input type="text" name="address" id="address" placeholder="Your address" onkeyup="addressValid()" required>
                         <span id="errorAddress"></span>
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="password" id="createpass" placeholder="create password" onkeyup="createPassValid()" required>
+                        <span id="errorCreatePass" class="errorPass"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="confirmpass" id="confirmpass" placeholder="confirm password" onkeyup="confirmPassValid()" required>
+                        <span id="errorConfirmPass" class="errorPass"></span>
+                    </div>
                     <div class="dog__name">
                         <label for="">*Dog's name</label>
                         <select name="dogname" id="dogname" required>
@@ -74,6 +83,9 @@
                             <option value="Doberman">Doberman</option>
                             <option value="Pomeranian">Pomeranian</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="image" id="image" required>
                     </div>
                     <button type="submit" name="btn" id="btn" value="submit">Submit<i class="uil uil-arrow-right"></i></button>
                 </form>

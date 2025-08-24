@@ -54,7 +54,7 @@ li {
     color: rgb(105, 74, 74);
 }
 
-.nav__container .nav__links {
+ .nav__links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ li {
     margin-right: 6%;
 }
 
-.nav__container a {
+.nav__links a {
     position: relative;
     /* font-size: 1.6rem; */
     font-size: 1.36rem;
@@ -71,11 +71,11 @@ li {
     margin-right: 1rem;
 }
 
-.nav__container a:hover {
+.nav__links a:hover {
     color: rgb(58, 57, 57);
 }
 
-.nav__container a::after {
+.nav__links a::after {
     content: '';
     position: absolute;
     height: 3px;
@@ -86,8 +86,25 @@ li {
     transition: .4s;
 }
 
-.nav__container a:hover::after {
+.nav__links a:hover::after {
     width: 100%;
+}
+
+.nav__container a button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    /* background-color: rgb(209, 52, 52); */
+    background-color: green;
+    color: #fff;
+    /* padding: .65rem .7rem; */
+    padding: .8rem 1.2rem;
+    border-radius: 6px;
+}
+
+.nav__container a button:hover {
+    cursor: pointer;
 }
 
 
@@ -110,7 +127,8 @@ li {
     padding: 4rem 6rem;
     border: 2px solid gray;
     border-radius: 8px;
-    height: 62vh;
+    height: 87vh;
+    /* overflow-y: scroll; */
 }
 
 
@@ -149,7 +167,11 @@ input:-webkit-autofill {
 
 .form-group span {
     color: rgb(236, 66, 66);
-    font-size: 1.16rem;
+    font-size: 1rem;
+}
+
+.form-group .errorPass {
+    /* font-size: 1rem; */
 }
 
 .dog__name {

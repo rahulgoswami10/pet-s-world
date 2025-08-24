@@ -82,6 +82,14 @@
                         </div>
                         <span id="errorAddress"></span>
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="createpass" id="createpass" placeholder="create password" onkeyup="createPassValid()" required>
+                        <span id="errorCreatePass" class="errorPass"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="confirmpass" id="confirmpass" placeholder="confirm password" onkeyup="confirmPassValid()" required>
+                        <span id="errorConfirmPass" class="errorPass"></span>
+                    </div>
                     <div class="dog__name">
                         <label for="">*Dog's name</label>
                         <select name="dogname" id="dogname">

@@ -1,3 +1,27 @@
+.nav__container a button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    background-color: rgb(209, 52, 52);
+    color: #fff;
+    /* padding: .65rem .7rem; */
+    padding: .8rem 1rem;
+    border-radius: 6px;
+}
+
+.nav__container a button:hover {
+    cursor: pointer;
+}
+
+/* .nav__container a:nth-last-child::after {
+    background-color: red;
+}
+
+.nav__container a button:hover::after {
+    width: 0;
+} */
+
 table {
     border-radius: 12px;
 }
@@ -14,6 +38,10 @@ td {
 
 td.dogname {
     font-weight: bold;
+}
+
+.dogimg img{
+    border-radius: 6.45px;
 }
 
 .display__container {
@@ -45,6 +73,17 @@ button.edit {
 
 button.delete {
     background-color: rgb(209, 52, 52);
+}
+
+.change {
+    /* background-color: rgb(209, 52, 52); */
+}
+
+.change button {
+    border: none;
+    outline: none;
+    background-color: rgb(4, 208, 4);
+    color: #fff;
 }
 
 button a {

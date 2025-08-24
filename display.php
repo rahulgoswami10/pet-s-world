@@ -34,7 +34,9 @@
                         <a href="">Contact us</a>
                     </div>
                     <!-- nav links ends -->
+                    <a href="logout.php" id="logout"><button>Log out <i class="uil uil-signin"></i></button></a>
                 </div>
+                <!-- <a href="logout.php"><button>Log out</button></a> -->
             </nav>
         </header>
         <!--======================== header ends ========================-->
@@ -48,8 +50,9 @@
             <div class="display__container">
                 <?php 
                     include("connection.php");
-
-                    $sql = "SELECT * FROM `users`";
+                    session_start();
+                    $userID = $_SESSION['id'];
+                    $sql = "SELECT * FROM `users` WHERE `user_id` = '$userID'";
                     
                     $data = mysqli_query($conn, $sql);
 
@@ -66,6 +69,7 @@
                         <th>Email</th>
                         <th>Address</th>
                         <th>Dog's name</th>
+                        <th>Dog's Photo</th>
                         <th>Action</th>
                     </tr>
                     <?php 
@@ -78,9 +82,11 @@
                                 <td><?php echo $result['email']; ?></td>
                                 <td><?php echo $result['address']; ?></td>
                                 <td class="dogname"><?php echo $result["dog's name"]; ?></td>
+                                <td class="dogimg"><img src="<?php echo $result['image']; ?>" alt="dog photo" height="100px" width="130px"></td>
                                 <td class="action__btn">
                                     <button class="edit" title="edit"><a href="edit.php?edit_id=<?php echo $result['user_id']; ?>"><i class="uil uil-edit"></i></a></button>
                                     <button class="delete" title="delete"><a href="delete.php?del_id=<?php echo $result['user_id']; ?>"><i class="uil uil-trash-alt"></i></a></button>
+                                    <a href="cngpass.php" class="change" title="change password"><button><i class="uil uil-keyhole-square"></i></button></a>
                                 </td>
                             </tr>
                             <?php
